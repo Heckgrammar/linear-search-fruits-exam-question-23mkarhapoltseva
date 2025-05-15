@@ -4,8 +4,29 @@
     {
         static void Main(string[] args)
         {
-            string[] fruits = { "banana", "apple", "orange", "pear", "grape", "pineapple" };
-
+bool found = false;
+		string[] fruits = { "banana", "apple", "orange", "pear", "grape", "pineapple" };
+		Console.WriteLine("What word would you like to find?");
+		string tofind = Console.ReadLine();
+		for ( int i = 0; i < fruits.Length; i++)
+		{
+			if (fruits[i].ToLower () == tofind.ToLower()) 
+			{
+				found = true; 
+				break;
+			}
+		}
+		if (found)  
+		{
+		Console.WriteLine("True");	
+		}
+		else 
+		{
+			Console.WriteLine("False");
+		}
+		
+	}
+}
             // Your program should:
             // Ask the user what word they would like to find
             // Output the message True if the word is found
